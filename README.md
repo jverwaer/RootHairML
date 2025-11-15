@@ -1,14 +1,14 @@
-# rhsegmentor: root hair segmentation
+# RootHairML: machine-learning-assisted root hair segmentation 
 
-**rhsegmentor** is a Python package simplifies the bulk segmentation and analysis of root hair images.
+**RootHairML** is a Python package simplifies the bulk segmentation and analysis of root hair images.
 
 <center>
 <img src="image.png" alt="example" width="500"/>
 </center>
 
-## Using rhsegmentor
+## Using RootHairML
 
-rhsegmentor is available as a Python package and can be pip-installed. However, users who prefer not to pip-install the package will find most functionalities of the package in `bundle` folder (the Python modules `root_segmentor_VIB.py` and `skeleton_processor.py` in that folder).
+RootHairML is available as a Python package and can be pip-installed. However, users who prefer not to pip-install the package will find most functionalities of the package in `bundle` folder (the Python modules `root_segmentor_VIB.py` and `skeleton_processor.py` in that folder).
 
 - **Option 1: step-by-step analysis.** Users who want to learn about the functionalities of the package and the structure of the analysis pipeline are advised to follow the steps as described in *Installation* and *Tutorial* below.
 
@@ -24,13 +24,13 @@ rhsegmentor is available as a Python package and can be pip-installed. However, 
 
 ## Installation
 
-`rhsegmentor` can be installed directly form the git repo. We recommend to use a dedicated environment (using `venv` or `conda`).
+`RootHairML` can be installed directly form the git repo. We recommend to use a dedicated environment (using `venv` or `conda`).
 
-`pip install git+https://github.com/jverwaer/root_segmentor.git`
+`pip install git+https://github.com/jverwaer/RootHairML.git`
 
 ## Tutorial
 
-This tutorial guides you throuhg the main use cases of the `rhsegmentor` package.
+This tutorial guides you throuhg the main use cases of the `RootHairML` package.
 
 ### Step 0: imports
 
@@ -42,10 +42,10 @@ import os
 import sys
 sys.path.append("..")
 
-# imports the rhsegmentor (most important functions are available at the top level of the package)
-import rhsegmentor as rh
-from rhsegmentor import utils
-from rhsegmentor import sample_data_generator
+# imports the RootHairML (most important functions are available at the top level of the package)
+import RootHairML as rh
+from RootHairML import utils
+from RootHairML import sample_data_generator
 
 # basic imports for visualization, image loading and classification
 import matplotlib.pyplot as plt
