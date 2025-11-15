@@ -53,10 +53,10 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from skimage import io
 
-# magic function (ony for interactive useage)
-%matplotlib tk
-
 ```
+
+when using interactively, add the magic function `%matplotlib tk` if needed.
+
 
 ### Step 1: look at some sample data
 

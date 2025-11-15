@@ -1,5 +1,5 @@
 """
-This module provides functions to generate sample training and test data for the root_segmentor package.
+This module provides functions to generate sample training and test data for the RootHairML package.
 """
 
 import pkg_resources
@@ -15,12 +15,12 @@ test_labels = ["img4 vertices.csv", "img5 vertices.csv"]
 
 def get_image_path(fname):
     # Get the file path to the binary file within the package
-    image_path = pkg_resources.resource_filename('rhsegmentor', path.join("data", fname))
+    image_path = pkg_resources.resource_filename('RootHairML', path.join("data", fname))
     return image_path
 
 def get_label_path(fname):
     # Get the file path to the binary file within the package
-    image_path = pkg_resources.resource_filename('rhsegmentor', path.join("data", fname))
+    image_path = pkg_resources.resource_filename('RootHairML', path.join("data", fname))
     return image_path
 
 def create_training_data(savepath = "./trainData"):
