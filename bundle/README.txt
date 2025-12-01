@@ -1,13 +1,17 @@
-# rhsegmentor
+# RootHairML
 
-rhsegmentor detects and measure root hairs. 
+RootHairML detects and measure root hairs. 
 This folder contains everything required to train new models or to analyze a set of images based on a model.
 
-Copy paste the root folder rhsegmentor and all subfolders + files in your own user folder.
+Copy paste the root folder "bundle" and all subfolders + files in your own user folder.
+* The files `root_segementor_VIB.py` and skeleton_processor.py contains several esential functions and should stay on the exact location.
+DO NOT TOUCH THESE
 
 The folder "scripts" contain python scripts that you can use to execute training or analysis.
 
 The folder "models" contain models to be used for the analysis. New models can be made as well and are stored in this folder.
+
+The folder "trainData" should contain all images and trace files that you want to use for training. 
 
 The folder "images" should contain all images that you want to analyze. Importantly, make sure that they have uniquely identifiable names, as the filename will be used as sole identification in the output file. 
 
@@ -64,9 +68,9 @@ the name of the csv files should be "'filename of image (without jpg)' vertices.
 
 You can easily do this with NeuronJ.
 
-Put all images and their vertices files in the folder "training_data"
+Put all images and their vertices files in the folder "trainData"
 
-optional: give a name for your new model and specify the path of the training_data and the model by opening train.py in an editor and changing them 
+optional: give a name for your new model and specify the path of the training data and the model by opening train.py in an editor and changing them 
 
 Navigate to the "scripts" folder in a terminal and run train.py:
 

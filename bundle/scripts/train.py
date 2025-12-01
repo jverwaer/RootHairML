@@ -8,7 +8,7 @@ newmodel = "../models/newmodel.joblib"
 
 # specify the location of the training data
 
-training_data = "../training_data/"
+training_data = "../trainData/"
 
 # specify the number of estimators (the more, the slower the model. default 500)
 
@@ -39,7 +39,7 @@ import pandas as pd
 #The first step only computes labels and features per image and stores them as npy files.
 
 # compute FEATURES and LABELS for each image in a given folder
-files_list = [(training_data)+f for f in os.listdir(training_data) if f[-3:] == "JPG"]
+files_list = [(training_data)+f for f in os.listdir(training_data) if f[-3:].lower() == "jpg"]
 rs.imgs_to_XY_data(img_file_list = files_list,
                     root_traces_file_list = None,
                     auto_transform = False,
