@@ -60,7 +60,7 @@ when using interactively, add the magic function `%matplotlib tk` if needed.
 
 ### Step 1: look at some sample data
 
-The functions `create_training_data` and `create_test_data` in the code fragment below create training and test data (both images and labels) that will be used in this tutorial.
+The functions `create_training_data` and `create_test_data` in the code fragment below create training and test data (both images and labels) that will be used in this tutorial. In particular, a folder `trainData` is created which contains sample images and labels.
 
 The method `load_training_image` allows to read an image and the tracings for training as well. The `auto_transform` option allows to automatically transform the tracings coordinates into the coordinate system of the image.
 
@@ -107,7 +107,7 @@ rh.show_traces(vertices_s, vertices_e, mask)
 ### Step 2: Compile a dataset for training
 
 The tracings of multiple images are combined to learn a pixel-classifier. To achieve this goal, the following steps are taken:
-* All images and tracings in `./trainData` are listed
+* All images and tracings in `./trainData` are listed (When following the tutorial, this folder has been created in the preveous step. When using own data, create the folder `./trainData` an populate it with your training data.)
 * The function `imgs_to_XY_data` performs the following tasks:
     * Per image, pixel-level features are computed (texture, gradient image etc.)
     * Subsequently, per image, the the label of every pixel is computed (using a call to `create_root_buffer_background_image`)
@@ -200,7 +200,7 @@ results_df.to_excel("./measurements.xlsx")
 
 ### Step 7: Automate classification per folder
 
-List all files in `./testData`, detect roots and save the results in a xlsx file. All detected roots are saved for quality checking (in `save_dir`).
+List all files in `./testData`, detect roots and save the results in a xlsx file (when following the tutorial, the folder `./testData` has been created in the first step of the tutorial. When using your own data, create the folder `./testData` and populate it with your own test images.). All detected roots are saved for quality checking (in `save_dir`).
 
 
 ```python
