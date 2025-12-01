@@ -30,7 +30,9 @@ RootHairML is available as a Python package and can be pip-installed. However, u
 
 ## Tutorial
 
-This tutorial guides you throuhg the main use cases of the `RootHairML` package.
+This tutorial guides you throuhg the main use cases of the `RootHairML` package. It will generate sample data and the most convenient folder structure for performing an analysis. 
+
+:sparkles: the tutorial should run fine in Google Colab (first pip-install on Colab) 
 
 ### Step 0: imports
 
