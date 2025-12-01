@@ -80,6 +80,9 @@ vertices_s_RC = utils.flip_XY_RC(vertices_s)
 vertices_e_RC = utils.flip_XY_RC(vertices_e)
 ```
 
+The `trainData` has a rather simple structure, it keeps images in `{FNAME}.jpg` files and the corresponding annotations in `{FNAME} vertices.csv` files (See paper for precise description of the annotation file format. It is the output of ImageJ/Fiji line annotations, where the vertices describing the line segments are stored). It uses the structure in the file names to match images with their annotations. The batch-wise procedures assume that all `.jpg` files in the folder are training images.
+
+
 To create training data from the loaded images, the tracings are first transformed into a root-segmentation mask with `root_segmentation_mask`. This function create a np.ndarray mask image containing root-pixels (1), relevant background pixels for making a classification (2) and unclassified pixels (3). To do that, buffer zones are used around the images.
 
 
